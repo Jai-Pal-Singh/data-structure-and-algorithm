@@ -1,0 +1,5 @@
+case1: n^(log(a)/log(b)) > n^c)
+case2: n^(log(a)/log(b)) = n^c)
+case3: n^(log(a)/log(b)) < n^c)
+case2 is applicable
+Complexity is order of O(log(n)*n^(0.00))

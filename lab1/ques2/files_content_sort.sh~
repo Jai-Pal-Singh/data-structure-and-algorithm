@@ -1,0 +1,2 @@
+gcc files_content_sort.c
+./a.out Input_Files

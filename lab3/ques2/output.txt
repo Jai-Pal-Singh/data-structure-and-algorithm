@@ -1,0 +1,3 @@
+Tree Height : 3
+Levels of Tree : 2
+Elements in leaf node = 4

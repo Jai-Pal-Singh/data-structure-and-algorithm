@@ -1,0 +1,19 @@
+/*
+WAP TO IMPLEMENT MASTER'S METHOD.
+*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+
+int main(){
+printf("abc\n");
+	char *str1;
+	size_t bufsize = 100;
+	FILE fp;
+	fp = fopen("input.txt","r");
+	str1 = (char*)malloc(100*sizeof(char));
+	getline(&str1,&bufsize,stdin);
+	printf("%s\n",str1);
+	printf("abc\n");
+	return 0;
+}

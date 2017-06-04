@@ -1,0 +1,21 @@
+a.txt
+b.txt
+c.dat
+d.dat
+g (copy).pdf
+g.pdf
+h (copy).jpg
+h.jpg
+i (copy).gif
+i.gif
+j.txt
+j.txt~
+k.dat
+k.dat~
+l.dat
+l.dat~
+m.exe
+n.h
+o.html
+p.hrc
+r s.txt~

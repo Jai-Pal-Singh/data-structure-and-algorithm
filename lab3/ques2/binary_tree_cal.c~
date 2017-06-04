@@ -1,0 +1,17 @@
+/*
+WAP TO CALCULATE THE FOLLOWING FOR BINARY TREE:
+        	a.DEPTH/HEIGHT
+        	b.TOTAL NODES IN TREE
+        	c.LEAF NODE
+*/
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+	int n;
+	FILE *fp;
+	fp = fopen("input.txt","r");
+	fscanf("%d",&n)
+	
+	return 0;
+}

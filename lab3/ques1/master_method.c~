@@ -1,0 +1,26 @@
+/*
+WAP TO IMPLEMENT MASTER'S METHOD.
+*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+
+int main(){
+	char *str1,*token;
+	size_t bufsize = 100;
+	FILE *fp;
+	fp = fopen("input.txt","r");
+	str1 = (char*)malloc(100*sizeof(char));
+	getline(&str1,&bufsize,fp);
+	printf("%s",str1);
+	
+	token[0] = strtok(str1, "=");
+	while( token != NULL ) 
+   {
+      printf( " %s\n", token );
+    
+      token = strtok(NULL, s);
+   }
+	
+	return 0;
+}

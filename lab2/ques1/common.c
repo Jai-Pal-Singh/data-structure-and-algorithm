@@ -1,0 +1,80 @@
+/*
+find out the common elements in 3 arrays a, b and c of size m, n and p respectively. Your program should take order n time wher n is the largest size among all the 3 sizes.  
+*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(){
+	int m_size, n_size, p_size, m=0,n=0,p=0,*a,*b,*c,*res1,*res2,r1,r2,i,j=0;
+	FILE *fp;
+	
+	fp = fopen("m.txt","r");
+	fscanf(fp,"%d",&m_size);
+	a = (int*)malloc((m_size+1)*sizeof(int));
+	for(i=0;i<m_size;i++)
+		fscanf(fp,"%d",&a[i]);
+	fclose(fp);
+	
+	fp = fopen("n.txt","r");
+	fscanf(fp,"%d",&n_size);
+	b = (int*)malloc((n_size+1)*sizeof(int));
+	for(i=0;i<n_size;i++)
+		fscanf(fp,"%d",&b[i]);
+	fclose(fp);
+	
+	fp = fopen("p.txt","r");
+	fscanf(fp,"%d",&p_size);
+	c = (int*)malloc((p_size+1)*sizeof(int));
+	for(i=0;i<p_size;i++)
+		fscanf(fp,"%d",&c[i]);
+	fclose(fp);
+	
+	if(m_size > n_size)
+		r1 = m_size;
+	else
+		r1 = n_size;
+	
+	if(r1 > p_size)
+		r2 = r1;
+	else
+		r2 = p_size;
+		
+	res1 = (int*)malloc((r1+1)*sizeof(int));
+	res2 = (int*)malloc((r2+1)*sizeof(int));
+	
+	for(i=0;i<r1;i++){
+		if(a[m]>b[n])
+			n++;
+		else if(a[m]<b[n])
+			m++;
+		else
+		{
+			res1[j] = a[m];
+			j++;
+			m++;
+			n++;
+		}
+	}
+	m=0;
+	j=0; 
+	for(i=0;i<r2;i++){
+		if(res1[m]>c[p])
+			p++;
+		else if(res1[m]<c[p])
+			m++;
+		else
+		{
+			res2[j] = res1[m];
+			j++;
+			res2[j] = '\0';
+			m++;
+			p++;
+		}
+	}
+	fp = fopen("output.txt","w");
+	for(i=0;res2[i]!='\0';++i)
+		fprintf(fp,"%d\n",res2[i]);
+	fclose(fp);
+	return 0;
+}
